@@ -1,0 +1,168 @@
+.detail-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ), url('https://th.bing.com/th/id/OIG2.bTLulR8rsDzcXq8Is..G?w=1024&h=1024&rs=1&pid=ImgDetMain');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 150vh;
+}
+
+.description {
+  text-align: center;
+  margin-top: 20px; /* Ajusta este valor según tus necesidades */
+}
+
+.detail-container {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.reservation-section {
+  width: 80%; /* Ajusta el ancho para que sea menor que el contenedor */
+  max-width: 280px; /* Asegúrate de que no sobresalga del contenedor */
+  background-color: #f0f0f0; /* Ajusta este color según tu preferencia */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.reservation-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reservation-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Centra todos los elementos dentro del formulario */
+}
+
+.reservation-section form label {
+  font-size: 14px; /* Ajusta este valor según tu preferencia */
+  color: #333;
+  width: 100%; /* Asegura que las etiquetas ocupen todo el ancho disponible */
+  text-align: center; /* Centra el texto de las etiquetas */
+}
+
+.reservation-section form input, .reservation-section form select {
+  padding: 10px;
+  font-size: 14px; /* Ajusta este valor según tu preferencia */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 80%; /* Ajusta el ancho según tu preferencia */
+  margin-bottom: 10px; /* Añade un margen inferior para espaciar los elementos */
+}
+
+.reservation-section form button {
+  display: block;
+  width: 80%; /* Ajusta el ancho según tu preferencia */
+  padding: 10px;
+  margin-top: 10px; /* Reduce el margen superior */
+  background-color: #12664F;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reservation-section form button:hover {
+  background-color: yellowgreen;
+}
+
+.reservation-section form button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+  text-align: center; /* Centra el texto de las etiquetas */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="datetime-local"] { /* Asegúrate de incluir todos los tipos de entrada que estás utilizando */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0; /* Reduce el margen para no alejar tanto el botón */
+  background-color: rgba(83, 207, 83, 0.7);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 40px; /* Incrementa el padding para hacerlo más grande */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más notoria */
+  text-align: center;
+  z-index: 1000;
+  width: 80%; /* Ancho del popup */
+  max-width: 500px; /* Máximo ancho */
+  font-size: 20px; /* Texto más grande */
+}
+
+.popup p {
+  margin: 0;
+  padding: 0;
+  font-size: 24px; /* Tamaño del texto del mensaje */
+}

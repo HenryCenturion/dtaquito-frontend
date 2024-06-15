@@ -1,0 +1,35 @@
+<div class="detail-page">
+  <div class="detail-container" *ngIf="sportSpace">
+    <h1>{{ sportSpace.name }}</h1>
+    <img [src]="sportSpace.imageUrl" alt="Space photo" width="200">
+    <p class="description"><strong>Description:</strong> {{ sportSpace.description }}</p>
+    <p><strong>Price:</strong> S/ {{ sportSpace.price }}</p>
+    <p><strong>Schedule:</strong> {{ sportSpace.StartTime}} - {{ sportSpace.endTime}}</p>
+
+    <div class="reservation-section">
+      <h2>Reservation</h2>
+      <form *ngIf="loggedUser && loggedUser.role === 'R' && sportSpace && sportSpace.id" (ngSubmit)="confirmAndSubmitReservation(sportSpace.id, sportSpace.price)">
+        <div class="form-field">
+          <label for="date">Date:</label>
+          <input id="date" type="datetime-local" [(ngModel)]="date" name="date">
+        </div>
+        <div class="form-field">
+          <label for="hours">Hours:</label>
+          <input id="hours" type="number" [(ngModel)]="hours" name="hours" min="1" max="2">
+        </div>
+        <div class="form-field">
+          <label for="payment">Payment Method:</label>
+          <select id="payment" (change)="onPaymentMethodChange($event)">
+            <option disabled selected>Select a payment method</option>
+            <option *ngFor="let payment of payments" [value]="payment.id">{{payment.cardNumber}}</option>
+          </select>
+        </div>
+        <button type="submit" [disabled]="!date || !hours || hours < 1 || hours > 2">Reserve</button>
+      </form>
+    </div>
+    <!-- Popup -->
+    <div class="popup" *ngIf="showPopup">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+.main-container-subscription{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height:100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ), url('https://th.bing.com/th/id/OIG4.TNkDfmDwCiYXeV6xQl5b?pid=ImgGn');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.subscription-container {
+  max-width: 300px;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #ABC4A1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 90px auto;
+}
+
+.subscription-container h2 {
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.subscription-container p {
+  font-size: 16px;
+  color: black;
+  font-weight: 550;
+}
+
+.premium-message {
+  font-size: 14px;
+}
+
+.plan-value {
+  background-color: #E3A857;
+  color: black;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.plan-value-premium {
+  background-color: gold;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.plan-box {
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+.subscription-container select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.subscription-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #12664F;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.subscription-container button:hover {
+  background-color: #218838;
+}
+
+.subscription-container button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .subscription-container {
+    padding: 20px 10px;
+    margin: 45px auto;
+  }
+
+  .subscription-container h2 {
+    font-size: 24px;
+  }
+
+  .subscription-container p {
+    font-size: 14px;
+  }
+
+  .subscription-container select,
+  .subscription-container button {
+    padding: 5px;
+  }
+
+  .plan-box {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscription-container {
+    padding: 10px 5px;
+    margin: 20px auto;
+  }
+
+  .subscription-container h2 {
+    font-size: 20px;
+  }
+
+  .subscription-container p,
+  .premium-message {
+    font-size: 12px;
+  }
+
+  .subscription-container select,
+  .subscription-container button {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .plan-box {
+    padding: 5px;
+  }
+}

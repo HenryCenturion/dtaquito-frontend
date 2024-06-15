@@ -1,0 +1,30 @@
+<div class="reservations-table">
+  <h2 class="table-title">My Reservations</h2>
+
+  <table *ngIf="reservations.length > 0; else noReservations">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fecha y Hora</th>
+      <th>Horas</th>
+      <th>Nombre del Espacio Deportivo</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{ reservation.id }}</td>
+      <td>{{ reservation.time | date:'dd/MM/yyyy, h:mm a' }}</td>
+      <td>{{ reservation.hours }}</td>
+      <td>{{ reservation.sportSpaces.name }}</td>
+      <td>
+        <button (click)="cancelReservation(reservation.id)">Cancelar Reserva</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noReservations>
+    <p>No tienes ninguna reserva.</p>
+  </ng-template>
+</div>

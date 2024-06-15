@@ -1,0 +1,62 @@
+<div class="main-container">
+<div class="payment-container user-info" *ngIf="payment as paymentData; else paymentForm">
+  <h2>Payment Method</h2>
+  <div class="profile-info">
+    <div class="info-item">
+      <label>Card Number: </label>
+      <div class="info-value">{{paymentData.cardNumber}}</div>
+    </div>
+    <div class="info-item">
+      <label>Expiration Date: </label>
+      <div class="info-value">{{paymentData.expirationDate | date:'MM/yyyy'}}</div>
+    </div>
+    <div class="info-item">
+      <label>Card Holder: </label>
+      <div class="info-value">{{paymentData.cardHolder}}</div>
+    </div>
+    <div class="info-item">
+      <label>Card Issuer: </label>
+      <div class="info-value">{{paymentData.cardIssuer}}</div>
+    </div>
+    <button (click)="deletePayment()">Delete payment method</button>
+  </div>
+</div>
+</div>
+
+<ng-template #paymentForm>
+  <div class="main-container">
+  <div class="payment-container user-info">
+    <h2>Add a payment method</h2>
+    <form (ngSubmit)="createPayment(paymentForm.value)" #paymentForm="ngForm">
+      <div>
+        <label for="cardNumber">Card Number: </label>
+        <input type="text" id="cardNumber" name="cardNumber" ngModel required (keypress)="numericOnly($event)" maxlength="16">
+        <div *ngIf="cardNumberError" class="error">{{cardNumberError}}</div>
+      </div>
+      <div>
+        <label for="expirationDate">Expiration Date: </label>
+        <input type="month" id="expirationDate" name="expirationDate" ngModel required>
+      </div>
+      <div>
+        <label for="cardHolder">Card Holder: </label>
+        <input type="text" id="cardHolder" name="cardHolder" ngModel required>
+      </div>
+      <div class="flex-row">
+        <div>
+          <label for="cardIssuer">Card Issuer: </label>
+          <select id="cardIssuer" name="cardIssuer" ngModel required>
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+          </select>
+        </div>
+        <div>
+          <label for="cvv">CVV: </label>
+          <input type="text" id="cvv" name="cvv" ngModel required (keypress)="numericOnly($event)" maxlength="3">
+          <div *ngIf="cvvError" class="error">{{cvvError}}</div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!paymentForm.form.valid">Add payment method</button>
+    </form>
+  </div>
+    </div>
+</ng-template>

@@ -1,0 +1,96 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height:100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ), url('https://th.bing.com/th/id/OIG3.6sziCwDIbHZtESRe1_MB?pid=ImgGn');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.register-container {
+  background-color: #5B826D;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.register-container select {
+  width: 100%;
+  padding: 1px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  color: #333;
+}
+
+.register-container select:focus {
+  outline: none;
+  border-color: #5B826D;
+}
+
+.register-container h2 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.register-container .form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.register-container label {
+  display: block;
+  margin-bottom: 1px;
+  color: #333;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.register-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+  transform: scale(1.05);
+}
+
+.register-container p {
+  margin-top: 10px;
+}
+
+.register-container a {
+  color: black;
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}

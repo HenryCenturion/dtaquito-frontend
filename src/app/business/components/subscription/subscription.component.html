@@ -1,0 +1,17 @@
+<div class="main-container-subscription">
+<div class="subscription-container" *ngIf="subscription">
+  <h2>Your subscription</h2>
+  <p class="plan-box">Plan: <span [ngClass]="{'plan-value-premium': subscription.plan === 'premium', 'plan-value': subscription.plan !== 'premium'}">{{subscription.plan}}</span></p>
+  <p class="premium-message" *ngIf="subscription.plan !== 'premium'">Get premium for the cost of 70 soles</p>
+  <div *ngIf="payments.length > 0; else noPayment">
+    <select *ngIf="subscription.plan !== 'premium'" (change)="onPaymentMethodChange($event)">
+      <option disabled selected>Select a payment method</option>
+      <option *ngFor="let payment of payments" [value]="payment.id">{{payment.cardNumber}}</option>
+    </select>
+    <button *ngIf="subscription.plan !== 'premium'" (click)="upgradeToPremium()" [disabled]="!selectedPayment">Get premium</button>
+  </div>
+  <ng-template #noPayment>
+    <p>You need to add a payment method to upgrade to premium.</p>
+  </ng-template>
+</div>
+</div>

@@ -1,0 +1,92 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height:100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ), url('https://th.bing.com/th/id/OIG3.6sziCwDIbHZtESRe1_MB?pid=ImgGn');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.login-container {
+  background-color: #5B826D;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.error-message {
+  color: #FF0000;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+h2 {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 1px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.register-link {
+  color: white;
+  font-weight: 400;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+p {
+  margin-top: 10px;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

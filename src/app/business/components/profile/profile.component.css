@@ -1,0 +1,184 @@
+.main-container {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5), /* Aumenta la opacidad */
+    rgba(0,0,0,0.5)  /* Aumenta la opacidad */
+  ), url('https://th.bing.com/th/id/OIG4.4bN8WgqsEjX6qRsk27ZB?w=1024&h=1024&rs=1&pid=ImgDetMain');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+}
+
+.profile-container {
+  max-width: 300px;
+  width: 100%;
+  padding: 40px 20px; /* Aumenta el padding vertical */
+  background-color: #ABC4A1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto; /* Centrar horizontalmente y añadir margen vertical */
+}
+
+.user-info {
+  background-color: rgba(255, 255, 255, 0.85); /* Cambia esto */
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.profile-container h2 {
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.profile-container p {
+  font-size: 16px;
+  color: #2F4F2F;
+  font-weight: 550;
+}
+
+.profile-info {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-item label {
+  margin-right: 10px;
+}
+
+.info-value {
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.profile-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px; /* Aumenta el margen superior */
+  margin-bottom: 5px;
+  background-color: #12664F;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-container button:hover {
+  background-color: #218838;
+}
+
+.profile-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-container label {
+  font-size: 14px;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button-container button {
+  width: calc(50% - 5px); /* Ajusta el ancho de los botones para que se ajusten al contenedor con un pequeño espacio entre ellos */
+}
+
+.profile-container input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.profile-container input[type="password"] {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.profile-container form button[type="submit"] {
+  background-color: #28a745;
+}
+
+.profile-container form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.profile-container form button[type="button"] {
+  background-color: #dc3545;
+}
+
+.profile-container form button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px 10px;
+    margin: 45px auto;
+  }
+
+  .profile-container h2 {
+    font-size: 24px;
+  }
+
+  .profile-container p {
+    font-size: 14px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-item label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .button-container button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px 5px;
+    margin: 20px auto;
+  }
+
+  .profile-container h2 {
+    font-size: 20px;
+  }
+
+  .profile-container p {
+    font-size: 12px;
+  }
+
+  .profile-container input,
+  .profile-container form button {
+    padding: 5px;
+  }
+}

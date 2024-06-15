@@ -1,0 +1,51 @@
+/* Estilos para el contenedor de la tabla */
+.reservations-table {
+  max-width: 800px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center;
+}
+
+/* Estilos para el título de la tabla */
+.table-title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #ABC798;
+}
+
+/* Estilos para el mensaje de "No tienes ninguna reserva" */
+p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+button {
+  padding: 8px 16px;
+  border-radius: 5px; /* Bordess redondeados */
+  background-color: #f24236; /* Color de fondo original */
+  color: #fff; /* Color de texto blanco */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+button:hover {
+  background-color: #d63027; /* Color de fondo al pasar el cursor */
+}

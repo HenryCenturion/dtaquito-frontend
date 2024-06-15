@@ -1,0 +1,28 @@
+<h2>Create New Sport Space</h2>
+<form (ngSubmit)="onSubmit()" #sportSpaceForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" [(ngModel)]="name" required>
+  </div>
+  <div>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" name="imageUrl" placeholder="Image URL" [(ngModel)]="imageUrl" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Description" [(ngModel)]="description" required>
+  </div>
+  <div>
+    <label for="price">Price per hour:</label>
+    <input type="number" id="price" name="price" placeholder="Price per hour" [(ngModel)]="price" required>
+  </div>
+  <div>
+    <label for="startTime">Open time:</label>
+    <input type="time" id="startTime" name="startTime" placeholder="Open time" [(ngModel)]="startTime" required>
+  </div>
+  <div>
+    <label for="endTime">Close time:</label>
+    <input type="time" id="endTime" name="endTime" placeholder="Close time" [(ngModel)]="endTime" required>
+  </div>
+  <button type="submit" [disabled]="!sportSpaceForm.valid">Create</button>
+</form>

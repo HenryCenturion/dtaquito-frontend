@@ -1,0 +1,33 @@
+<div class="main-container">
+<div class="profile-container" *ngIf="user">
+  <h2>User profile</h2>
+
+  <div *ngIf="!editing" class="profile-info">
+    <div class="info-item">
+      <label>Name:</label>
+      <div class="info-value">{{ user.name }}</div>
+    </div>
+    <div class="info-item">
+      <label>Email:</label>
+      <div class="info-value">{{ user.email }}</div>
+    </div>
+    <button (click)="editing = true">Edit profile</button>
+  </div>
+
+  <form *ngIf="editing" (ngSubmit)="updateUser()">
+    <label for="name">Name: </label>
+    <input id="name" [(ngModel)]="user.name" name="name">
+
+    <label for="email">Email: </label>
+    <input id="email" [(ngModel)]="user.email" name="email">
+
+    <label for="password">Password: </label>
+    <input id="password" [(ngModel)]="user.password" name="password" type="password">
+
+    <div class="button-container">
+      <button type="submit">Update</button>
+      <button type="button" (click)="cancelUpdate()">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>
